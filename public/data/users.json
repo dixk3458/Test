@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "email": "jaewoong@naver.com",
+    "password": "jaewoong"
+  },
+  {
+    "id": "2",
+    "email": "jiheon@naver.com",
+    "password": "jiheon"
+  }
+]
