@@ -31,12 +31,14 @@ export default function SigninPage() {
       <form onSubmit={e => handleSubmit(e)}>
         <label htmlFor="email">이메일</label>
         <input
+          id="email"
           type="text"
           value={formData.email}
           onChange={e => handleChangeFormData('email', e.target.value)}
         />
         <label htmlFor="password">비밀번호</label>
         <input
+          id="password"
           type="password"
           value={formData.password}
           onChange={e => handleChangeFormData('password', e.target.value)}

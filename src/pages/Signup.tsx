@@ -27,18 +27,21 @@ export default function SignupPage() {
       <form onSubmit={e => handleSubmit(e)}>
         <label htmlFor="email">이메일</label>
         <input
+          id="email"
           type="text"
           value={formData.email}
           onChange={e => handleChangeFormData('email', e.target.value)}
         />
         <label htmlFor="password">비밀번호</label>
         <input
+          id="password"
           type="password"
           value={formData.password}
           onChange={e => handleChangeFormData('password', e.target.value)}
         />
         <label htmlFor="confirmPassword">비밀번호 확인</label>
         <input
+          id="confirmPassword"
           type="password"
           value={formData.confirmPassword}
           onChange={e =>
@@ -49,8 +52,12 @@ export default function SignupPage() {
           <p>비밀번호가 일치하지 않습니다.</p>
         )}
         <button
+          data-testid="submitButton"
           disabled={
-            !formData.email || !formData.password || !formData.confirmPassword
+            !formData.email ||
+            !formData.password ||
+            !formData.confirmPassword ||
+            formData.password !== formData.confirmPassword
           }
         >
           로그인
