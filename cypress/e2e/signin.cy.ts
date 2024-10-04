@@ -54,7 +54,6 @@ describe('로그인 화면', () => {
     cy.get('@submitButton').click();
 
     // then
-    
 
     cy.wait('@getUsers').its('response.statusCode').should('eq', 200);
 
